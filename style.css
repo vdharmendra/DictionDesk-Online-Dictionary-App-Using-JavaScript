@@ -17,7 +17,10 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #4d59fb;
+    background: #ffd2b7;
+}
+header{
+    color: #c56328;
 }
 .wrapper{
     width: 420px;
@@ -46,7 +49,7 @@ body{
 }
 .search input:focus{
     padding: 0 41px;
-    border: 2px solid #4d59fb;
+    border: 2px solid #c56328;
 }
 .search input::placeholder{
     color: #b8b8b8;
@@ -58,7 +61,7 @@ body{
     transform: translateY(-50%);
 }
 .search input:focus ~ i{
-    color: #4d59fb;
+    color: #c56328;
 }
 .search i{
     left: 18px;
@@ -131,7 +134,7 @@ ul .content::-webkit-scrollbar{
 .content li .details{
     padding-left: 10px;
     border-radius: 4px 0 0 4px;
-    border-left: 3px solid #4d59fb;
+    border-left: 3px solid #c56328;
 }
 .content li .details p{
     font-size: 17px;

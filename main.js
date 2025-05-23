@@ -1,14 +1,16 @@
 const wrapper = document.querySelector(".wrapper"),
 searchInput = wrapper.querySelector("input"),
 synonyms =wrapper.querySelector(".synonyms .list"),
-infoText = wrapper.querySelector(".info-text");
+infoText = wrapper.querySelector(".info-text"),
+volumeIcon = wrapper.querySelector(".word i");
+let audio;
 
 // DATA FUNCTION
 function data(result, word){
     if(result.title){
         infoText.innerHTML = `Searching the meaning of <span>"${word}"</span>`;
     }else{
-        console.log(result);
+        // console.log(result);
         wrapper.classList.add("active");
         let definitions = result[0].meanings[0].definitions[0],
         phonetics = `${result[0].meanings[0].partOfSpeech} /${result[0].phonetics[0].text}/`;
@@ -18,15 +20,19 @@ function data(result, word){
         document.querySelector(".word span").innerText = phonetics;
         document.querySelector(".meaning span").innerText = definitions.definition;
         document.querySelector(".example span").innerText = result[0].meanings[2].definitions[0].example;
-        console.log(result[0].meanings[1].synonyms);
+        // AUDIO 
+        audio = new Audio(result[0].phonetics[0].audio);
+        console.log(result[0].phonetics[0].audio);
+        console.log("https://api.dictionaryapi.dev/media/pronunciations/en/moon-uk.mp3");
         // let synonyms = result[0].meanings[1].synonyms;
-        if(definitions.synonyms[0] == undefined){
+        if(!definitions.synonyms){
             synonyms.parentElement.style.display = "none";
         }else{
             synonyms.parentElement.style.display = "block";
             synonyms.innerHTML ="";
             for(let i = 0; i < 5 ; i++){
-                let tag = `<span>${result[0].meanings[1].synonyms[i]},</span>`;
+                let tag = `<span onclick=serach('${result[0].meanings[1].synonyms[i]}')>${result[0].meanings[1].synonyms[i]},</span>`;
+                // console.log(result[0].meanings[1].synonyms[i]);
                 synonyms.insertAdjacentHTML("beforeend", tag);
             }
         }
@@ -34,6 +40,10 @@ function data(result, word){
     }
 }
 
+function serach(word){
+    searchInput.value = word;
+    fecthApi(word);
+}
 
 
 // fetch api function
@@ -51,4 +61,8 @@ searchInput.addEventListener("keyup", e =>{
     if(e.key === "Enter" && e.target.value){
         fecthApi(e.target.value);
     }
-})
+});
+
+volumeIcon.addEventListener("click", ()=> {
+    audio.play();
+});
