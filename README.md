@@ -29,29 +29,29 @@
 
 <br>
 <span>Desktop Design</span><br/>
-<a href="" target="_blank" >
+<a href="https://www.behance.net/gallery/226624721/DictionDesk-Online-Dictionary-App-Using-JavaScript" target="_blank" >
 <img src="./img/dictionaryAPICard.gif" width="575px"/>
 </a>
 <br />
 <span>Desktop Hover Effect Design </span><br/>
-<a href="" target="_blank" >
+<a href="https://www.behance.net/gallery/226624721/DictionDesk-Online-Dictionary-App-Using-JavaScript" target="_blank" >
 <img src="./img/dictionaryAPICard.png" width="475px"/>
 <img src="./img/dictionaryAPICardHover.png" width="475px"/>
 </a>
 <br>
 <span>Desktop Design</span><br/>
-<a href="" target="_blank" >
+<a href="https://www.behance.net/gallery/226624721/DictionDesk-Online-Dictionary-App-Using-JavaScript" target="_blank" >
 <img src="./img/dictionaryAPICardUIUXLayout.gif" width="575px"/>
 </a>
 <br />
 <span>Desktop UI UX Layout </span><br/>
-<a href="" target="_blank" >
+<a href="https://www.behance.net/gallery/226624721/DictionDesk-Online-Dictionary-App-Using-JavaScript" target="_blank" >
 
 <img src="./img/dictionaryAPICardHoverUIUXLayout.png" width="275px"/>
 <img src="./img/dictionaryAPICardUIUXLayout.png" width="275px"/>
 </a>
 <br />
 <span>Cover</span><br/>
-<a href="" target="_blank" >
+<a href="https://www.behance.net/gallery/226624721/DictionDesk-Online-Dictionary-App-Using-JavaScript" target="_blank" >
 <img src="./img/cover.png" width="575px"/>
 </a>
